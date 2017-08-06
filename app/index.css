@@ -1,0 +1,26 @@
+body {
+    font-family: Monospace;
+
+}
+
+.margin-below {
+    margin-bottom: 10px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    align-content: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+    text-align: center;
+}

@@ -20,6 +20,7 @@
   "dependencies": {
     "body-parser": "^1.4.3",
     "express": "^4.13.4",
+    "ng-infinite-scroll": "^1.3.0",
     "nodemon": "^1.11.0",
     "request": "latest"
   }

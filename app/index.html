@@ -2,25 +2,26 @@
 <html ng-app="FlickrApp">
 <head>
     <title>Web Developement Flickr</title>
+    <link rel="stylesheet" type="text/css" href="index.css"></link>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.js"></script> -->
 </head>
-
 <body>
 <div>
-    <h1>Lets Flickr!</h1>
+    <h1>Find Your Inspiration</h1>
     <div ng-controller="FeedController">
-        <ul ng-repeat='feed in feeds' >
-            <li  class='list-group-item'>
-                <div>
-                    <img src='{{feed.media.m}}'/>
-                    <p><a href="{{feed.link}}">feed.link</a> by <a href="mailto:{{feed.author}}" target="_top">{{feed.author}}</a></p>
-                    Description : {{feed.description}}
-                    <br>
-                    Tags:{{feed.tags}}
+        <ul ng-repeat='feed in feeds' class="margin-below">
+            <li class='margin-below'>
+                <div >
+                    <img src='{{feed.media.m}}' class="margin-below" />
+                    <p class="margin-below"><a href="{{feed.link}}">{{feed.link}}</a> by <a href="mailto:{{feed.author}}" target="_top">{{feed.author}}</a></p>
+                    <!-- Description : <div ng-bind-html="feed.description | unsafe"></div> -->
+                    <p class="margin-below" ng-show='feed.title'><span class="bold-text">Description </span>: {{feed.title}}</p>
+                     <p class="margin-below"><span class="bold-text">Date Taken </span>: {{feed.date_taken}}</p>
+                    <p class="margin-below" ng-show='feed.tags'><span class="bold-text">Tags</span>:{{feed.tags}}</p>
                 </div>
-
             </li>
         </ul>
     </div>
