@@ -1,5 +1,6 @@
 <!doctype html>
 <html ng-app="FlickrApp">
+
 <head>
     <title>Web Developement Flickr</title>
     <link rel="stylesheet" type="text/css" href="index.css"></link>
@@ -8,23 +9,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.js"></script> -->
 </head>
+
 <body>
-<div>
-    <h1>Find Your Inspiration</h1>
-    <div ng-controller="FeedController">
-        <ul ng-repeat='feed in feeds' class="margin-below">
-            <li class='margin-below'>
-                <div >
-                    <img src='{{feed.media.m}}' class="margin-below" />
-                    <p class="margin-below"><a href="{{feed.link}}">{{feed.link}}</a> by <a href="mailto:{{feed.author}}" target="_top">{{feed.author}}</a></p>
-                    <!-- Description : <div ng-bind-html="feed.description | unsafe"></div> -->
-                    <p class="margin-below" ng-show='feed.title'><span class="bold-text">Description </span>: {{feed.title}}</p>
-                     <p class="margin-below"><span class="bold-text">Date Taken </span>: {{feed.date_taken}}</p>
-                    <p class="margin-below" ng-show='feed.tags'><span class="bold-text">Tags</span>:{{feed.tags}}</p>
-                </div>
-            </li>
-        </ul>
+    <div>
+        <h1>Find Your Inspiration</h1>
+        <div class="fixed-gap"></div>
+        <div ng-controller="FeedController" class="center-body">
+            <div>
+                Search :
+                <input type="text" ng-model="search_text" placeholder="Search by Text" />
+            </div>
+            <div class="fixed-gap"></div>
+            <div class="column-division">
+                <ul ng-repeat='feed in feeds | filter:search_text' class="margin-below">
+                    <li class='margin-below'>
+                        <div class="block-container">
+                            <img src='{{feed.media.m}}' class="margin-below" />
+                            <div class="margin-below"><a href="{{feed.link}}">{{feed.link}}</a> by <a href="mailto:{{feed.author}}" target="_top">{{feed.author}}</a></div>
+                            <!-- Description : <div ng-bind-html="feed.description | unsafe"></div> -->
+                            <div class="margin-below" ng-show='feed.title'><span class="bold-text">Description </span>: {{feed.title}}</div>
+                            <div class="margin-below"><span class="bold-text">Date Taken </span>: {{feed.date_taken}}</div>
+                            <div class="margin-below" ng-show='feed.tags'><span class="bold-text">Tags</span>:{{feed.tags}}</div>
+                        </div>
+                        <!-- <p class="margin-below"></p> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
 </body>
+
 </html>

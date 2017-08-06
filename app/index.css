@@ -1,6 +1,16 @@
 body {
     font-family: Monospace;
+    background-color: #B39EB5;
 
+}
+
+.block-container {
+    display:inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    width: 380.88px;
+    height: 300px;
+    /*border: 1px solid #eee;*/
 }
 
 .margin-below {
@@ -14,7 +24,6 @@ body {
 img {
     width: 150px;
     height: 150px;
-    align-content: center;
 }
 
 ul {
@@ -23,4 +32,20 @@ ul {
 
 h1 {
     text-align: center;
+}
+
+.center-body {
+    align-content: center;
+    text-align: center;
+}
+
+.fixed-gap {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.column-division {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
 }
