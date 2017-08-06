@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="FlickrApp">
+<head>
+    <title>Web Developement Flickr</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+</head>
+
+<body>
+<div>
+    <h1>Lets Flickr!</h1>
+    <div ng-controller="FeedController">
+        <ul ng-repeat='feed in feeds' >
+            <li  class='list-group-item'>
+                <div>
+                    <img src='{{feed.media.m}}'/>
+                    <p><a href="{{feed.link}}">feed.link</a> by <a href="mailto:{{feed.author}}" target="_top">{{feed.author}}</a></p>
+                    Description : {{feed.description}}
+                    <br>
+                    Tags:{{feed.tags}}
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
