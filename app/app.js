@@ -4,7 +4,8 @@
     app.controller('FeedController', function($http, $scope) {
         return $http({
             method: 'GET',
-            url: 'https://localhost:8080/api/feeds',
+            // url: 'https://localhost:8080/api/feeds',
+            url: 'https://flickrwebdev.herokuapp.com/api/feeds'
         }).then(function successCallback(response) {
             console.log("==============response")
             console.log(response.data.items)
