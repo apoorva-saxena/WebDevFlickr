@@ -22,7 +22,7 @@ server.get('/api/feeds', function(req, res) {
 })
 
 //listen to server
-server.listen(8080);
+server.listen(process.env.PORT || 8080);
 console.log("Server listening to port 8080")
 
 exports = module.exports = server
