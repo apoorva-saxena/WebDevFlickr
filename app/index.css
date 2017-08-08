@@ -50,3 +50,7 @@ h1 {
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
 }
+
+.input-style {
+    width: 142px;
+}
