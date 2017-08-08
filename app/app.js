@@ -7,17 +7,10 @@
             // url: 'https://localhost:8080/api/feeds',
             url: 'https://flickrwebdev.herokuapp.com/api/feeds'
         }).then(function successCallback(response) {
-            console.log("==============response")
-            console.log(response.data.items)
             $scope.feeds = response.data.items
         }, function errorCallback(response) {
             console.log("error: ", response)
         });
-
-        // $scope.renderHtml = function(html_code) {
-        // 	console.log(html_code)
-        //     return $sce.trustAsHtml(html_code);
-        // };
 
     })
 
