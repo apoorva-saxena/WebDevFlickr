@@ -4,7 +4,7 @@ const server = express();
 const bodyParser = require('body-parser');
 const feed_data = require('./scripts/feed_data_service')
 
-server.use(bodyParser.urlencoded())
+// server.use(bodyParser.urlencoded())
 server.use(bodyParser.json());
 
 function log(obj) {
