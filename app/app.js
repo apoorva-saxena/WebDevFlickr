@@ -6,6 +6,8 @@
             method: 'GET',
             url: 'http://localhost:8080/api/feeds',
         }).then(function successCallback(response) {
+            console.log("==============response")
+            console.log(response.data.items)
             $scope.feeds = response.data.items
         }, function errorCallback(response) {
             console.log("error: ", response)
