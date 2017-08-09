@@ -32,9 +32,9 @@ $ open http://localhost:8080
 
 ## Other info
 
-- Think about how you might improve the speed of the page in terms of the images/content loading.
+ - __Think about how you might improve the speed of the page in terms of the images/content loading.__
   We can host the images and other static assets on a cdn to speed up the loading time. 
-- A search functionality based on tags, or possibly the title of the photo.
+- __A search functionality based on tags, or possibly the title of the photo.__
   Added search functionality which allows searching by title / description.
-- Alternatively if you can think of any other features that you feel would further enhance your app, then we'd love to see what you can come up with!
+- __Alternatively if you can think of any other features that you feel would further enhance your app, then we'd love to see what you can come up with!__
   Have hosted it on heroku. We can add more features like allowing user accounts and allowing the ability to favourite an image.
