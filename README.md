@@ -2,8 +2,8 @@
 
 This is a single page app which displayes all the results from the flickr api and provides search functionality to search for any particular photo and its information
 
-https://flickrwebdev.herokuapp.com/
-The api results can be seen : https://flickrwebdev.herokuapp.com/api/feeds
+- Webapp : https://flickrwebdev.herokuapp.com/
+- The api results can be seen : https://flickrwebdev.herokuapp.com/api/feeds
 
 ## Technologies Used
 - Nodejs
